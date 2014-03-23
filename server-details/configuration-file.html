@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>League Overseer by allejo</title>
+
+        <link rel="stylesheet" href="../stylesheets/styles.css">
+        <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>Leagueoverseer</h1>
+                <p>A BZFlag plug-in used by leagues in order to automatically relay information from BZFlag servers to the league site, such as team names and automatic match reports.</p>
+
+                <p class="view"><a href="https://github.com/allejo/leagueOverSeer">View the Project on GitHub <small>allejo/leagueOverSeer</small></a></p>
+
+
+                <ul>
+                    <li><a href="https://github.com/allejo/leagueOverSeer/zipball/master">Download <strong>ZIP File</strong></a></li>
+                    <li><a href="https://github.com/allejo/leagueOverSeer/tarball/master">Download <strong>TAR Ball</strong></a></li>
+                    <li><a href="https://github.com/allejo/leagueOverSeer">View On <strong>GitHub</strong></a></li>
+                </ul>
+            </header>
+            <section>
+                <h3><a href="../index.html">&laquo; Navigation</a></h3>
+
+                <hr>
+                
+                <h3>Configuration File Options</h3>
+
+                <p><code>ROTATIONAL_LEAGUE</code></p>
+                <ul>
+                    <li><p>Default: <em>false</em></p></li>
+                    <li><p>Description:    If a league uses different maps for its matches (such as Open League) then make sure that this value is set to 'true' and if the league is GU or Ducati, then set the value to 'false'</p></li>
+                </ul>
+
+                <p><code>MAPCHANGE_PATH</code></p>
+                <ul>
+                    <li><p>Default: <em>N/A</em></p></li>
+                    <li><p>Description: If this is a rotational league, then be sure to change the path to the mapchange.out file because that is where the name of the map file is stored. Whatever is located in this file is what will be submitted as the map played. If this is not a rotational, then this variable can be left with the current value or commented out.</p></li>
+                </ul>
+
+                <p><code>DISABLE_MATCH_REPORT</code></p>
+                <ul>
+                    <li><p>Default: <em>false</em></p></li>
+                    <li><p>Description: Disable automatically submitting matches when the <code>/official</code> command is issued. Use this option when running a server that will not be reporting matches to the league website.</p></li>
+                </ul>
+
+                <p><code>DISABLE_TEAM_MOTTO</code></p>
+                <ul>
+                    <li><p>Default: <em>false</em></p></li>
+                    <li><p>Description: Disable fetching team names and setting the team names as the mottos for players when they join. Use this option if you would like to allow players to use their own mottos when joining a league server.</p></li>
+                </ul>
+
+                <p><code>LEAGUE_OVERSEER_URL</code></p>
+                <ul>
+                    <li><p>Default: <em>N/A</em></p></li>
+                    <li><p>Description: The URL the plugin will be using for <strong>both</strong> automatic match reports and the team name fetching for replacing a player's motto. When this option is used, it will automatically set <code>AUTO_REPORT_URL</code> and <code>MOTTO_FETCH_URL</code> to the same value.</p></li>
+                </ul>
+
+                <p><code>MATCH_REPORT_URL</code></p>
+                <ul>
+                    <li><p>Default: <em>N/A</em></p></li>
+                    <li><p>Description: The URL the plugin will be using <strong>only</strong> to report matches. This option can be used if the plugin will not be reporting matches to a league website but instead to a custom script for a custom tournament.</p></li>
+                </ul>
+
+                <p><code>MOTTO_FETCH_URL</code></p>
+                <ul>
+                    <li><p>Default: <em>N/A</em></p></li>
+                    <li><p>Description: The URL the plugin will be using <strong>only</strong> to fetch team names for players' mottos. If the plugin is running a custom tournament and is reporting to a custom script, then this URL will be set to the actual league site in order to fetch the correct team names.</p></li>
+                </ul>
+
+                <p><code>DEBUG_LEVEL</code></p>
+                <ul>
+                    <li><p>Default: <em>1</em></p></li>
+                    <li><p>Description: The debug level that will be used by the plugin to report some information on who started a match, who canceled a match, what teams played, etc.</p></li>
+                </ul>
+
+                <p><code>VERBOSE_LEVEL</code></p>
+                <ul>
+                    <li><p>Default: <em>4</em></p></li>
+                    <li><p>Description: This option is not in the sample configuration and should not really be used on a live server as there is no need for it. This option only exists in need of debugging purposes where this is the debug level the plugin will use for <strong>all</strong> of the extra information the plugin received and how it is handled; this value is separate and does <strong>not</strong> overwrite the <code>DEBUG_LEVEL</code> value. <em>Warning:</em> Your log file will be much larger if this value is set appropriately.</p></li>
+                </ul>
+
+                <h3>Notes</h3>
+                <p>If a configuration option is not set, the specified default value will be used. Please note, some configuration file options will override other values such as <code>LEAGUE_OVERSEER_URL</code>, which will cause <code>MATCH_REPORT_URL</code> and <code>MOTTO_FETCH_URL</code> to be ignored.</p>
+
+                <h2>Samples</h2>
+
+                <h3>Sample League Configuration</h3>
+<pre><code># Sample League Overseer Configuration File
+
+[leagueOverSeer]
+  LEAGUE_OVERSEER_URL = http://league.bzflag.org/leagueOverSeer.php
+  DEBUG_LEVEL = 1
+</code></pre>
+
+                <h3>Sample Tournament Configuration</h3>
+<pre><code># Sample League Overseer Configuration File
+
+[leagueOverSeer]
+  MATCH_REPORT_URL = http://tourney.callsign.com/myCustomTourney.php # Report matches here
+  MOTTO_FETCH_URL = http://league.bzflag.org/leagueOverSeer.php      # Fetch team names from here
+  DEBUG_LEVEL = 1
+</code></pre>
+            </section>
+            <footer>
+                <p>This project is maintained by <a href="https://github.com/allejo">allejo</a></p>
+                <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+            </footer>
+        </div>
+        <script src="javascripts/scale.fix.js"></script>
+        
+    </body>
+</html>

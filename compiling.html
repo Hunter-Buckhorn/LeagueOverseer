@@ -1,162 +1,129 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Leagueoverseer by allejo</title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>League Overseer by allejo</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Leagueoverseer</h1>
-        <p>A BZFlag plug-in used by leagues in order to automatically relay information from BZFlag servers to the league site, such as team names and automatic match reports.</p>
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>Leagueoverseer</h1>
+                <p>A BZFlag plug-in used by leagues in order to automatically relay information from BZFlag servers to the league site, such as team names and automatic match reports.</p>
 
-        <p class="view"><a href="https://github.com/allejo/leagueOverSeer">View the Project on GitHub <small>allejo/leagueOverSeer</small></a></p>
+                <p class="view"><a href="https://github.com/allejo/leagueOverSeer">View the Project on GitHub <small>allejo/leagueOverSeer</small></a></p>
 
 
-        <ul>
-          <li><a href="https://github.com/allejo/leagueOverSeer/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/allejo/leagueOverSeer/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/allejo/leagueOverSeer">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3><a href="index.html">&laquo; Navigation</a></h3>
+                <ul>
+                    <li><a href="https://github.com/allejo/leagueOverSeer/zipball/master">Download <strong>ZIP File</strong></a></li>
+                    <li><a href="https://github.com/allejo/leagueOverSeer/tarball/master">Download <strong>TAR Ball</strong></a></li>
+                    <li><a href="https://github.com/allejo/leagueOverSeer">View On <strong>GitHub</strong></a></li>
+                </ul>
+            </header>
+            <section>
+                <h3><a href="index.html">&laquo; Navigation</a></h3>
 
-        <hr>
-        
-        <h2>Compiling</h2>
+                <hr>
+                
+                <h2>Compiling</h2>
 
-        <h3 id="requirements">Requirements</h3>
+                <h3 id="requirements">Requirements</h3>
 
-        <ul>
-          <li>BZFlag 2.4.3+ (after Feb 16th 2014)</li>
-          <li>C++11</li>
-          <li>
-            JSON Library
-            <ul>
-              <li>libjson0-dev (Debian/Ubuntu)</li>
-              <li>json-c-devel (Fedora Linux)</li>
-            </ul>
-          </li>
-        </ul>
+                <ul>
+                    <li>BZFlag 2.4.3+ (after Feb 16th 2014)</li>
+                    <li>C++11</li>
+                    <li>
+                        JSON Library
+                        <ul>
+                            <li>libjson0-dev (Debian/Ubuntu)</li>
+                            <li>json-c-devel (Fedora Linux)</li>
+                        </ul>
+                    </li>
+                </ul>
 
-        <h3 id="how-to-compile">How to Compile</h3>
+                <h3 id="how-to-compile">How to Compile</h3>
 
-        <ol>
-          <li>
-            <p>Check out the 2.4.x BZFlag source code from GitHub, if you do not already have it on your server. If you are still using SVN, it is recommended you switch to using Git because all future development of BZFlag will use Git.</p>
-            <p><code>git clone -b v2_4_x https://github.com/BZFlag-Dev/bzflag-import-3.git bzflag</code></p>
-          </li>
-          <li>
-            <p>Go into the newly checked out source code and then the plugins directory.</p>
-            <p><code>cd bzflag/plugins</code></p>
-          </li>
-          <li>
-            <p>Run a git clone of this repository from within the plugins directory. This should have created a new leagueOverSeer directory within the plugins directory. Notice, you will be checking out the 'release' branch will always contain the latest release of the plugin to allow for easy update. If you are running a test port and would like the latest development build, use the 'master' branch instead of 'release.'</p>
-            <p><code>git clone -b release https://github.com/allejo/leagueOverSeer.git</code></p>
-          </li>
-          <li>
-            <p>The latest BZFlag trunk will contain a script called 'addToBuild.sh' and it will allow you to add the plugin to the build system.</p>
-            <p><code>sh addToBuild.sh leagueOverSeer</code></p>
-          </li>
-          <li>
-            <p>Instruct the build system to generate a Makefile and then compile and install the plugin.</p>
-            <p><code>cd ..; ./autogen.sh; ./configure; make; make install;</code></p>
-          </li>
-        </ol>
+                <ol>
+                    <li>
+                        <p>Check out the 2.4.x BZFlag source code from GitHub, if you do not already have it on your server. If you are still using SVN, it is recommended you switch to using Git because all future development of BZFlag will use Git.</p>
+                        <p><code>git clone -b v2_4_x https://github.com/BZFlag-Dev/bzflag-import-3.git bzflag</code></p>
+                    </li>
+                    <li>
+                        <p>Go into the newly checked out source code and then the plugins directory.</p>
+                        <p><code>cd bzflag/plugins</code></p>
+                    </li>
+                    <li>
+                        <p>Run a git clone of this repository from within the plugins directory. This should have created a new leagueOverSeer directory within the plugins directory. Notice, you will be checking out the 'release' branch will always contain the latest release of the plugin to allow for easy update. If you are running a test port and would like the latest development build, use the 'master' branch instead of 'release.'</p>
+                        <p><code>git clone -b release https://github.com/allejo/leagueOverSeer.git</code></p>
+                    </li>
+                    <li>
+                        <p>The latest BZFlag trunk will contain a script called 'addToBuild.sh' and it will allow you to add the plugin to the build system.</p>
+                        <p><code>sh addToBuild.sh leagueOverSeer</code></p>
+                    </li>
+                    <li>
+                        <p>Instruct the build system to generate a Makefile and then compile and install the plugin.</p>
+                        <p><code>cd ..; ./autogen.sh; ./configure; make; make install;</code></p>
+                    </li>
+                </ol>
 
-        <h3 id="updating-the-plugin">Updating the Plugin</h3>
+                <h3 id="updating-the-plugin">Updating the Plugin</h3>
 
-        <ol>
-          <li>
-            <p>Go into the leagueOverSeer folder located in your plugins folder.</p>
-          </li>
-          <li>
-            <p>Pull the changes from Git.</p>
-            <p><code>git pull origin release</code></p>
-          </li>
-          <li>
-            <p>
-              (Optional) If you have made local changes to any of the files from this project, you may receive conflict errors where you may resolve the conflicts yourself or you may simply overwrite your changes with whatever is in the repository, which is recommended. <em>If you have a conflict every time you update because of your local change, submit a pull request and it will be accepted, provided it's a reasonable change.</em> 
-            </p>
+                <ol>
+                    <li>
+                        <p>Go into the leagueOverSeer folder located in your plugins folder.</p>
+                    </li>
+                    <li>
+                        <p>Pull the changes from Git.</p>
+                        <p><code>git pull origin release</code></p>
+                    </li>
+                    <li>
+                        <p>(Optional) If you have made local changes to any of the files from this project, you may receive conflict errors where you may resolve the conflicts yourself or you may simply overwrite your changes with whatever is in the repository, which is recommended. <em>If you have a conflict every time you update because of your local change, submit a pull request and it will be accepted, provided it's a reasonable change.</em></p>
+                        <p><code>git reset --hard origin/release; git pull</code></p>
+                    </li>
+                    <li>
+                        <p>Compile the changes.</p>
+                        <p><code>make; make install;</code></p>
+                    </li>
+                </ol>
 
-            <p>
-              <code>git reset --hard origin/release; git pull</code>
-            </p>
-          </li>
-          <li>
-            <p>Compile the changes.</p>
+                <h3 id="common-issues">Common Issues</h3>
 
-            <p>
-              <code>make; make install;</code>
-            </p>
-          </li>
-          </ol>
-          <h3>
-          <a name="common-issues" class="anchor" href="#common-issues">
-            <span class="octicon octicon-link"></span>
-          </a>
-          Common Issues
-          </h3>
+                <p>Issues may be worded differently depending on the operating system or compiler but here are some common compiling or runtime issues. If your issue is not listed here, please report it so a fix can be added to this documentation.</p>
 
-          <p>
-          Issues may be worded differently depending on the operating system or compiler but here are some common compiling or runtime issues. If your issue is not listed here, please report it so a fix can be added to this documentation.
-          </p>
+                <ul>
+                    <li>
+                        <h4 id="symbol-lookup-error">Symbol Lookup Error</h4>
 
-          <h4>
-          <a name="symbol-lookup-error" class="anchor" href="#symbol-lookup-error">
-            <span class="octicon octicon-link"></span>
-          </a>
-          Symbol Lookup Error
-          </h4>
+                        <pre><code>bzfs: symbol lookup error: leagueOverSeer.so: undefined symbol: json_tokener_parse</code></pre>
 
-          <pre><code>bzfs: symbol lookup error: leagueOverSeer.so: undefined symbol: json_tokener_parse
-          </code></pre>
+                        <p>This error occurs when the plugin was not linked to the JSON library when it was compiled. If you are on Debian or Ubuntu, be sure you are using the provided "Makefile.am" file, which already links to the JSON library. If you are on another operating system, you need to link to the JSON library using the <code>-l</code> option in the <code>leagueOverSeer_la_LDFLAGS</code> section; for example, on Debian and Ubuntu, <code>-ljson</code> is used.</p>
+                    </li>
 
-          <p>
-          This error occurs when the plugin was not linked to the JSON library when it was compiled. If you are on Debian or Ubuntu, be sure you are using the provided "Makefile.am" file, which already links to the JSON library. If you are on another operating system, you need to link to the JSON library using the
-          <code>-l</code>
-          option in the
-          <code>leagueOverSeer_la_LDFLAGS</code>
-          section; for example, on Debian and Ubuntu,
-          <code>-ljson</code>
-          is used.
-          </p>
+                    <li>
+                        <h4 id="undeclared-identifier">Undeclared identifier</h4>
 
-          <h4>
-          <a name="undeclared-identifier" class="anchor" href="#undeclared-identifier">
-            <span class="octicon octicon-link"></span>
-          </a>
-          Undeclared identifier
-          </h4>
+                        <pre><code>Use of undeclared identifier 'bz_isCountDownPaused'</code></pre>
 
-          <pre><code>Use of undeclared identifier 'bz_isCountDownPaused'</code></pre>
+                        <p>or</p>
 
-          <p>or</p>
+                        <pre><code>'bz_eGameResumeEvent' was not declared in this scope</code></pre>
 
-          <pre><code>'bz_eGameResumeEvent' was not declared in this scope</code></pre>
-
-          <p>
-          This error occurs because the build of BZFlag you are using is outdated and the <em>bz_isCountDownPaused()</em>
-          function or
-          <em>bz_eGameResumeEvent</em>
-          event did not exist at the time you checked out/cloned your copy of BZFlag. In order to compile this plugin, you are required to use the latest BZFlag trunk, which has been migrated to GitHub so using git is a requirement.
-          </p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/allejo">allejo</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+                        <p>This error occurs because the build of BZFlag you are using is outdated and the <em>bz_isCountDownPaused()</em> function or <em>bz_eGameResumeEvent</em> event did not exist at the time you checked out/cloned your copy of BZFlag. In order to compile this plugin, you are required to use the latest BZFlag trunk, which has been migrated to GitHub so using git is a requirement.</p>
+                    </li>
+                </ul>
+            </section>
+            <footer>
+                <p>This project is maintained by <a href="https://github.com/allejo">allejo</a></p>
+                <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+            </footer>
+        </div>
+        <script src="javascripts/scale.fix.js"></script>
+    </body>
 </html>
