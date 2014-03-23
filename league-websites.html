@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>League Overseer by allejo</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Leagueoverseer</h1>
+        <p>A BZFlag plug-in used by leagues in order to automatically relay information from BZFlag servers to the league site, such as team names and automatic match reports.</p>
+
+        <p class="view"><a href="https://github.com/allejo/leagueOverSeer">View the Project on GitHub <small>allejo/leagueOverSeer</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/allejo/leagueOverSeer/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/allejo/leagueOverSeer/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/allejo/leagueOverSeer">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3><a href="index.html">&laquo; Navigation</a></h3>
+
+        <hr>
+        
+        <h3 id="bzion">BZiON</h3>
+
+        <p>The <a href="http://github.com/allejo/bzion">BZiON</a> project supports League Overseer automatically and does not require the leagueOverSeer.php file, instead read BZiON's documentation to learn how to configure accepting automatic match reports.</p>
+
+        <h3 id="bz-owl">bz-owl</h3>
+        <p>If you are hosting a league website using the <a href="https://code.google.com/p/bz-owl/">bz-owl</a> project, make sure you follow these requirements:</p>
+
+        <ol>
+          <li><p>Upload leagueOverSeer.php to the root of your league website directory.</p></li>
+          <li><p>Add the IPs of the official match servers to the $ALLOWED_IPS array located on line 27 of leagueOverSeer.php. This is a precaution so only official match servers can report matches and access data.</p></li>
+          <li><p>Set $AUTOREPORT_UID on line 31 to the user ID of the person who will be reporting the matches. For instance, you may want to create an 'autoreport' account on the league website and use that ID.</p></li>
+          <li><p>If you would like for the report handler to output match information received to a file, leave $LOG_DETAILS (line 35) set to <em>true</em> and set the file location with the $LOG_FILE variable on line 39. If you do not wish to log, set $LOG_DETAILS to false and leave $LOG_FILE as is.</p></li>
+          <li><p>Since all leagues have different scoring systems, configure line 49 to use the respective fractions of ELOs with their match durations. By default, GU league uses the 2/3 of the ELO points for 20 minute matches and all of the ELO points for 30 minute matches. This looks like: <code>array(20 =&gt; 2/3, 30 =&gt; 1)</code></p></li>
+        </ol>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/allejo">allejo</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
