@@ -1,102 +1,102 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>League Overseer by allejo</title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>League Overseer by allejo</title>
 
-    <link rel="stylesheet" href="../stylesheets/styles.css">
-    <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Leagueoverseer</h1>
-        <p>A BZFlag plug-in used by leagues in order to automatically relay information from BZFlag servers to the league site, such as team names and automatic match reports.</p>
+        <link rel="stylesheet" href="../stylesheets/styles.css">
+        <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>League Overseer</h1>
+                <p>A BZFlag plug-in used by leagues in order to automatically relay information from BZFlag servers to the league site, such as team names and automatic match reports.</p>
 
-        <p class="view"><a href="https://github.com/allejo/leagueOverSeer">View the Project on GitHub <small>allejo/leagueOverSeer</small></a></p>
+                <p class="view"><a href="https://github.com/allejo/leagueOverSeer">View the Project on GitHub <small>allejo/leagueOverSeer</small></a></p>
 
 
-        <ul>
-          <li><a href="https://github.com/allejo/leagueOverSeer/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/allejo/leagueOverSeer/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/allejo/leagueOverSeer">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3><a href="../index.html">&laquo; Navigation</a></h3>
+                <ul>
+                    <li><a href="https://github.com/allejo/leagueOverSeer/zipball/master">Download <strong>ZIP File</strong></a></li>
+                    <li><a href="https://github.com/allejo/leagueOverSeer/tarball/master">Download <strong>TAR Ball</strong></a></li>
+                    <li><a href="https://github.com/allejo/leagueOverSeer">View On <strong>GitHub</strong></a></li>
+                </ul>
+            </header>
+            <section>
+                <h3><a href="../index.html">&laquo; Navigation</a></h3>
 
-        <hr>
-        
-        <h3>Custom Script</h3>
+                <hr>
+                
+                <h3>Custom Script</h3>
 
-        <p>If you would like to host your own tournament using the League Overseer plugin, you may write your own script on a webserver to handle match reports from the plugin automatically. The plugin submits information via POST requests and the information submitted are the following:</p>
+                <p>If you would like to host your own tournament using the League Overseer plugin, you may write your own script on a webserver to handle match reports from the plugin automatically. The plugin submits information via POST requests and the information submitted are the following:</p>
 
-        <p><code>query</code></p>
-        <ul>
-          <li>The request the plugin is submitting. When submitting a match report, this value is set to <code>reportMatch</code>.</li>
-        </ul>
+                <p><code>query</code></p>
+                <ul>
+                    <li>The request the plugin is submitting. When submitting a match report, this value is set to <code>reportMatch</code>.</li>
+                </ul>
 
-        <p><code>apiVersion</code></p>
-        <ul>
-          <li>The API version the BZFS plugin is using when submitting information. The current API version is set to 1.</li>
-        </ul>
+                <p><code>apiVersion</code></p>
+                <ul>
+                    <li>The API version the BZFS plugin is using when submitting information. The current API version is set to 1.</li>
+                </ul>
 
-        <p><code>teamOneWins</code></p>
-        <ul>
-          <li>The number of times Team A captured the flag in the official match.</li>
-        </ul>
+                <p><code>teamOneWins</code></p>
+                <ul>
+                    <li>The number of times Team A captured the flag in the official match.</li>
+                </ul>
 
-        <p><code>teamTwoWins</code></p>
-        <ul>
-          <li>The number of times Team B captured the flag in the official match.</li>
-        </ul>
+                <p><code>teamTwoWins</code></p>
+                <ul>
+                    <li>The number of times Team B captured the flag in the official match.</li>
+                </ul>
 
-        <p><code>duration</code></p>
-        <ul>
-          <li>The duration of the match in minutes.</li>
-        </ul>
+                <p><code>duration</code></p>
+                <ul>
+                    <li>The duration of the match in minutes.</li>
+                </ul>
 
-        <p><code>matchTime</code></p>
-        <ul>
-          <li>The UTC timestamp of when the match was submitted</li>
-        </ul>
+                <p><code>matchTime</code></p>
+                <ul>
+                    <li>The UTC timestamp of when the match was submitted</li>
+                </ul>
 
-        <p><code>server</code></p>
-        <ul>
-          <li>The domain name of the server where the match took place.</li>
-        </ul>
+                <p><code>server</code></p>
+                <ul>
+                    <li>The domain name of the server where the match took place.</li>
+                </ul>
 
-        <p><code>port</code></p>
-        <ul>
-          <li>The port of the server where the match took place.</li>
-        </ul>
+                <p><code>port</code></p>
+                <ul>
+                    <li>The port of the server where the match took place.</li>
+                </ul>
 
-        <p><code>replayFile</code></p>
-        <ul>
-          <li>The name of the report file saved on the server.</li>
-        </ul>
+                <p><code>replayFile</code></p>
+                <ul>
+                    <li>The name of the report file saved on the server.</li>
+                </ul>
 
-        <p><code>mapPlayed</code></p>
-        <ul>
-          <li>The name of the map that was played on. This value is only applicable to rotational leagues.</li>
-        </ul>
+                <p><code>mapPlayed</code></p>
+                <ul>
+                    <li>The name of the map that was played on. This value is only applicable to rotational leagues.</li>
+                </ul>
 
-        <p><code>teamOnePlayers</code></p>
-        <ul>
-          <li>A list of BZIDs separated by commas of the players who participated on Team A.</li>
-        </ul>
+                <p><code>teamOnePlayers</code></p>
+                <ul>
+                    <li>A list of BZIDs separated by commas of the players who participated on Team A.</li>
+                </ul>
 
-        <p><code>teamTwoPlayers</code></p>
-        <ul>
-          <li>A list of BZIDs separated by commas of the players who participated on Team B.</li>
-        </ul>
+                <p><code>teamTwoPlayers</code></p>
+                <ul>
+                    <li>A list of BZIDs separated by commas of the players who participated on Team B.</li>
+                </ul>
 
-        <h3>Sample Post Request</h3>
+                <h3>Sample Post Request</h3>
 <pre><code>query=reportMatch&amp;
 teamOneWins=10&amp;
 teamTwoWins=6&amp;
@@ -104,13 +104,13 @@ matchTime=2013-04-01%2008:46:05&amp;
 duration=30&amp;
 teamOnePlayers=753,3466&amp;
 teamTwoPlayers=23177,31098</code></pre>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/allejo">allejo</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+            </section>
+            <footer>
+                <p>This project is maintained by <a href="https://github.com/allejo">allejo</a></p>
+                <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+            </footer>
+        </div>
+        <script src="javascripts/scale.fix.js"></script>
+        
+    </body>
 </html>
