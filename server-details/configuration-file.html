@@ -102,11 +102,21 @@
 </code></pre>
 
                 <h3>Sample Tournament Configuration</h3>
-<pre><code># Sample League Overseer Configuration File
+<pre><code># This sample configuration file will fetch team names from the official league site but will report
+# matches to a custom script for a custom tourney
 
 [leagueOverSeer]
   MATCH_REPORT_URL = http://tourney.callsign.com/myCustomTourney.php # Report matches here
   MOTTO_FETCH_URL = http://league.bzflag.org/leagueOverSeer.php      # Fetch team names from here
+  DEBUG_LEVEL = 1
+</code></pre>
+
+                <h3>Sample Team Name Only Configuration</h3>
+<pre><code># This sample configuration file will only fetch the teams for a player but will not report matches
+
+[leagueOverSeer]
+  DISABLE_MATCH_REPORT = true
+  MOTTO_FETCH_URL = http://league.bzflag.org/leagueOverSeer.php # Fetch team names from here
   DEBUG_LEVEL = 1
 </code></pre>
             </section>
