@@ -1,87 +1,162 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1">
-        <title>League Overseer by allejo</title>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-        <link rel="stylesheet" href="stylesheets/styles.css">
-        <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <!--[if lt IE 9]>
-        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-        <div class="wrapper">
-            <header>
-                <h1>League Overseer</h1>
-                <p>A BZFlag plug-in used by leagues in order to automatically relay information from BZFlag servers to the league site, such as team names and automatic match reports.</p>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-                <p class="view"><a href="https://github.com/allejo/leagueOverSeer">View the Project on GitHub <small>allejo/leagueOverSeer</small></a></p>
+    <title>Leagueoverseer by allejo</title>
+  </head>
 
-                <ul>
-                    <li><a href="https://github.com/allejo/leagueOverSeer/zipball/release">Download <strong>ZIP File</strong></a></li>
-                    <li><a href="https://github.com/allejo/leagueOverSeer/tarball/release">Download <strong>TAR Ball</strong></a></li>
-                    <li><a href="https://github.com/allejo/leagueOverSeer">View On <strong>GitHub</strong></a></li>
-                </ul>
-            </header>
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Leagueoverseer</h1>
+        <h2>A BZFlag plug-in used by leagues in order to automatically relay information from BZFlag servers to the league site, such as team names and automatic match reports.</h2>
+        <a href="https://github.com/allejo/LeagueOverseer" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
 
-            <section>
-                <h2>Navigation</h2>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="league-overseer-" class="anchor" href="#league-overseer-" aria-hidden="true"><span class="octicon octicon-link"></span></a>League Overseer <a href="https://github.com/allejo/LeagueOverseer/releases/tag/v1.1.1.275"><img src="https://img.shields.io/badge/release-v1.1.1-orange.svg" alt="Current Release"></a>
+</h1>
 
-                <ul>
-                    <li>
-                        <a href="developers.html">Developers</a>
-                        <ul>
-                            <li><a href="developers.html#thanks-to">Thanks to</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="compiling.html">Compiling</a>
-                        <ul>
-                            <li><a href="compiling.html#requirements">Requirements</a></li>
-                            <li><a href="compiling.html#how-to-compile">How to Compile</a></li>
-                            <li><a href="compiling.html#updating-the-plugin">Updating the Plugin</a></li>
-                            <li><a href="compiling.html#common-issues">Common Issues</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="server-details.html">Server Details</a>
+<p>League Overseer is a BZFlag plug-in that allows league servers to communicate with league websites to track player information, stats, match reports, and handle team data.</p>
 
-                        <ul>
-                            <li><a href="server-details/how-to-use.html">How to Use</a></li>
-                            <li><a href="server-details/how-to-use.html#deprecated-features">Deprecated Features</a></li>
-                            <li><a href="server-details/custom-slash-commands.html">Custom Slash Commands</a></li>
-                            <li><a href="server-details/configuration-file.html">Configuration File Options</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="league-websites.html">League Websites</a>
+<h2>
+<a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributors</h2>
 
-                        <ul>
-                            <li><a href="league-websites.html#bzion">BZiON</a></li>
-                            <li><a href="league-websites.html#bz-owl">bz-owl</a></li>
-                            <li><a href="league-websites/custom-script.html">Custom Script</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="roadmap.html">Development Roadmap</a>
+<h3>
+<a id="developers" class="anchor" href="#developers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Developers</h3>
 
-                        <ul>
-                            <li><a href="roadmap.html#1_1_x">1.1.x</a></li>
-                            <li><a href="roadmap.html#1_2_x">1.2.x</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="repository-info.html">Repository Information</a></li>
-                    <li><a href="https://github.com/allejo/leagueOverSeer/blob/master/LICENSE.markdown">License</a></li>
-                </ul>
-            </section>
-            <footer>
-                <p>This project is maintained by <a href="https://github.com/allejo">allejo</a></p>
-                <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-            </footer>
-        </div>
-        <script src="javascripts/scale.fix.js"></script>
-    </body>
+<p>These individuals have made multiple significant contributions to the project on a sustained basis. They become actively involved on improving and adding new features to the project.</p>
+
+<ul>
+<li>Vladimir Jimenez (<a href="https://github.com/allejo">allejo</a>)</li>
+<li>Ned Anderson (<a href="https://github.com/mdskpr">mdskpr</a>)</li>
+<li>Konstantinos Kanavouras (<a href="https://github.com/kongr45gpen">kongr45gpen/alezakos</a>)</li>
+</ul>
+
+<h3>
+<a id="thanks-to" class="anchor" href="#thanks-to" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thanks to</h3>
+
+<p>These individuals have assisted significantly with guiding the project in its current direction and have contributed several suggestions to continuously improve the project.</p>
+
+<ul>
+<li><a href="https://github.com/achoopic">apeman</a></li>
+<li><a href="https://github.com/blast007">blast</a></li>
+<li><a href="https://github.com/JMakey">BulletCatcher</a></li>
+<li><a href="https://github.com/JeffM2501">JeffM</a></li>
+</ul>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Full compatability with <a href="http://github.com/allejo/bzion">BZiON</a>
+</li>
+<li>Automatic match reporting</li>
+<li>Track player stats</li>
+<li>Global ban and mute list</li>
+<li>Match events</li>
+<li>Makes server configuration "brad-proof"</li>
+</ul>
+
+<h2>
+<a id="compiling" class="anchor" href="#compiling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compiling</h2>
+
+<p>Regardless of the size, complexity of this plug-in, and file count of this plugin, the plug-in can be easily compiled with </p>
+
+<h3>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h3>
+
+<ul>
+<li>BZFlag 2.4.3+ (<em>latest version available on GitHub is recommended</em>)</li>
+<li>C++11</li>
+<li>JSON Library
+
+<ul>
+<li>libjson0-dev (Debian/Ubuntu)</li>
+<li>json-c-devel (Fedora Linux)</li>
+</ul>
+</li>
+</ul>
+
+<h3>
+<a id="how-to-compile" class="anchor" href="#how-to-compile" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Compile</h3>
+
+<ol>
+<li>
+<p>Check out the 2.4.x BZFlag source code from GitHub, if you do not already have it on your server. If you are still using SVN, it is recommended you switch to using Git because all future development of BZFlag will use Git.</p>
+
+<pre><code>git clone -b v2_4_x https://github.com/BZFlag-Dev/bzflag-import-3.git bzflag
+</code></pre>
+</li>
+<li>
+<p>Go into the newly checked out source code and then the plugins directory.</p>
+
+<pre><code>cd bzflag/plugins
+</code></pre>
+</li>
+<li>
+<p>Run a git clone of this repository from within the plugins directory. This should have created a new <code>LeagueOverseer</code> directory within the plugins directory. Notice, you will be checking out the 'release' branch will always contain the latest release of the plugin to allow for easy updates. If you are running a test port and would like the latest development build, use the 'master' branch instead of 'release.'</p>
+
+<pre><code>git clone -b release https://github.com/allejo/LeagueOverseer.git
+</code></pre>
+</li>
+<li>
+<p>The latest BZFlag trunk will contain a script called 'addToBuild.sh' and it will allow you to add the plugin to the build system.</p>
+
+<pre><code>sh addToBuild.sh LeagueOverseer
+</code></pre>
+</li>
+<li>
+<p>Instruct the build system to generate a Makefile and then compile and install the plugin.</p>
+
+<pre><code>cd ..; ./autogen.sh; ./configure; make; make install;
+</code></pre>
+</li>
+</ol>
+
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h2>
+
+<p>For full documentation of this plug-in, please visit the dedicated <a href="http://allejo.github.io/LeagueOverseer/">website</a> which contains an excessive amount of detail of the plug-in's configuration and inner-workings.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="https://github.com/allejo/LeagueOverseer/blob/master/LICENSE.md">GNU General Public License Version 3.0</a></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/allejo/LeagueOverseer/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/allejo/LeagueOverseer/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/allejo/LeagueOverseer"></a> is maintained by <a href="https://github.com/allejo">allejo</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
 </html>
